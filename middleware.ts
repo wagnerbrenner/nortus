@@ -3,23 +3,40 @@ import type { NextRequest } from "next/server";
 
 export function middleware(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
+  const pathname = req.nextUrl.pathname;
 
-  const isLogin = req.nextUrl.pathname === "/login";
+  const publicRoutes = ["/login"];
+  const isPublicRoute = publicRoutes.includes(pathname);
 
-  const protectedRoutes = ["/", "/tickets", "/chat", "/simulator"];
-  const isProtected = protectedRoutes.some((route) => req.nextUrl.pathname.startsWith(route));
+  const protectedRoutes = ["/dashboard", "/tickets", "/chat", "/simulator"];
+  const isProtectedRoute = protectedRoutes.some((route) => pathname.startsWith(route));
 
-  if (isProtected && !token && !isLogin) {
+  if (pathname === "/") {
+    if (token) {
+      return NextResponse.redirect(new URL("/dashboard", req.url));
+    } else {
+      return NextResponse.redirect(new URL("/login", req.url));
+    }
+  }
+
+  if (isProtectedRoute && !token) {
     return NextResponse.redirect(new URL("/login", req.url));
   }
 
-  if (isLogin && token) {
-    return NextResponse.redirect(new URL("/", req.url));
+  if (isPublicRoute && token && pathname === "/login") {
+    return NextResponse.redirect(new URL("/dashboard", req.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/", "/tickets/:path*", "/chat/:path*", "/simulator/:path*", "/login"],
+  matcher: [
+    "/",
+    "/dashboard/:path*",
+    "/tickets/:path*",
+    "/chat/:path*",
+    "/simulador/:path*",
+    "/login",
+  ],
 };
