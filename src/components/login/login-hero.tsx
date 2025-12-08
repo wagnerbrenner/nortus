@@ -6,7 +6,7 @@ export function LoginHero() {
       src={"/LoginPage.png"}
       alt="Ilustração de consultor atendendo cliente"
       fill
-      className="object-contain rounded-4xl drop-shadow-2xl"
+      className="object-cover rounded-4xl drop-shadow-2xl"
       priority
     />
   );

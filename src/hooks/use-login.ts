@@ -12,19 +12,21 @@ export function useLogin() {
   return useMutation({
     mutationFn: authService.login,
     onSuccess: async (data) => {
-      // Salva o token no store (que já salva no cookie)
-      setAuth(data.token);
-
-      // Salva nome do usuário no localStorage
-      if (typeof window !== "undefined") {
-        localStorage.setItem("user_name", data.username);
-      }
+      setAuth(data.token, data.username);
 
       toast.success("Login realizado com sucesso!");
-      router.push("/");
+      router.push("/dashboard");
     },
-    onError: () => {
-      toast.error("Falha ao autenticar. Verifique suas credenciais.");
+    onError: (error: any) => {
+      const status = error.response?.status;
+
+      if (status === 400) {
+        toast.error("Dados inválidos. Verifique os campos e tente novamente.");
+      } else if (status === 401) {
+        toast.error("E-mail ou senha incorretos.");
+      } else {
+        toast.error("Falha ao autenticar. Tente novamente mais tarde.");
+      }
     },
   });
 }

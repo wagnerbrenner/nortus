@@ -10,17 +10,17 @@ export default function LoginPage() {
       <Head>
         <title>Nortus | Login</title>
       </Head>
-      <main className="min-h-screen max-w-screen flex bg-background text-foreground px-16 py-6 gap-16">
-      <section className="flex flex-col w-1/2">
-        <LoginHeader />
-        <LoginForm />
-      </section>
+      <main className="min-h-screen min-w-[1000px] w-full flex flex-col lg:flex-row bg-background text-foreground px-4 sm:px-8 lg:px-16 py-6 gap-8 lg:gap-16 overflow-x-auto">
+        <section className="flex flex-col w-full lg:w-1/2 min-w-[400px]">
+          <LoginHeader />
+          <LoginForm />
+        </section>
 
-      <section className="relative flex-1 w-1/2 aspect-square bg-secondary flex items-center justify-center rounded-4xl overflow-hidden">
-        <LoginActions />
-        <LoginHero />
-      </section>
-    </main>
+        <section className="relative flex-1 w-full lg:w-1/2 min-w-[400px] min-h-[400px] lg:aspect-square bg-secondary flex items-center justify-center rounded-4xl overflow-hidden">
+          <LoginActions />
+          <LoginHero />
+        </section>
+      </main>
     </>
   );
 }
