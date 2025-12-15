@@ -22,7 +22,8 @@
       "@/hooks/*": ["src/hooks/*"],
       "@/utils/*": ["src/utils/*"],
       "@/styles/*": ["src/styles/*"],
-      "@/types/*": ["src/types/*"]
+      "@/types/*": ["src/types/*"],
+      "@/schema/*": ["src/schema/*"]
     }
   },
   "include": [

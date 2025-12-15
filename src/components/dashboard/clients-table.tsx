@@ -93,9 +93,9 @@ export function ClientsTable() {
         render: (ticket: Ticket) => ticket.priority,
       },
       {
-        key: "responsible",
+        key: "monthValue",
         header: t("dashboard.clients.monthValue"),
-        render: (ticket: Ticket) => ticket.responsible || "-",
+        render: (ticket: Ticket) => ticket.priority || "-",
       },
       {
         key: "status",

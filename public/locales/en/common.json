@@ -93,6 +93,89 @@
   },
   "tickets": {
     "title": "Ticket Management",
-    "newTicket": "New Ticket"
+    "newTicket": "New Ticket",
+    "stats": {
+      "open": "Open Tickets",
+      "inProgress": "In Progress",
+      "resolved": "Resolved Today",
+      "avgTime": "Average Time"
+    },
+    "table": {
+      "title": "Ticket List",
+      "id": "ID",
+      "priority": "Priority",
+      "client": "Client",
+      "subject": "Subject",
+      "status": "Status",
+      "createdAt": "Created At",
+      "responsible": "Responsible",
+      "actions": "Actions"
+    },
+    "filters": {
+      "search": "Search by ID, client or subject...",
+      "allStatuses": "All statuses",
+      "allPriorities": "All priorities",
+      "allResponsible": "All responsible"
+    },
+    "pagination": {
+      "page": "Page",
+      "of": "of"
+    },
+    "statuses": {
+      "open": "Open",
+      "inProgress": "In Progress",
+      "pending": "Pending",
+      "resolved": "Resolved",
+      "closed": "Closed"
+    },
+    "priorities": {
+      "urgent": "Urgent",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "dialog": {
+      "new": {
+        "title": "New Ticket",
+        "description": "Fill in the details below to register a new ticket on the platform."
+      },
+      "edit": {
+        "title": "Edit Ticket",
+        "description": "Update the ticket information"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "save": "Save",
+        "update": "Update"
+      }
+    },
+    "form": {
+      "clientName": "Client Name",
+      "clientNamePlaceholder": "Name of the person or company requesting support",
+      "email": "Email",
+      "emailPlaceholder": "Contact email for updates and responses",
+      "priority": "Priority",
+      "priorityPlaceholder": "Select the urgency level of the service",
+      "responsible": "Responsible",
+      "responsiblePlaceholder": "Who will be responsible for this ticket",
+      "subject": "Subject",
+      "subjectPlaceholder": "Brief summary of the problem or request",
+      "validation": {
+        "clientNameMin": "Client name must be at least 3 characters",
+        "emailInvalid": "Invalid email",
+        "priorityRequired": "Select a priority",
+        "responsibleMin": "Responsible must be at least 3 characters",
+        "subjectMin": "Subject must be at least 10 characters"
+      }
+    },
+    "actions": {
+      "edit": "Edit",
+      "view": "View"
+    },
+    "errors": {
+      "loadError": "Error loading tickets",
+      "loadErrorMessage": "Could not load ticket data. Please try again later.",
+      "noTickets": "No tickets found."
+    },
+    "loading": "Loading tickets..."
   }
 }

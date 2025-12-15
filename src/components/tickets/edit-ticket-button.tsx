@@ -14,33 +14,54 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { CreateTicketForm } from "./create-ticket-form";
-import { Plus } from "lucide-react";
+import { PencilLineIcon } from "lucide-react";
+import type { Ticket } from "@/types/ticket";
 
-export function TicketsActionButton() {
+type Props = {
+  ticket: Ticket;
+};
+
+export function EditTicketButton({ ticket }: Props) {
   const { t } = useTranslation("common");
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
-        <Button className="cursor-pointer rounded-full font-medium shadow-(--shadow-accent) hover:bg-accent/80 transition-all">
-          <Plus size={14} />
-          {t("tickets.newTicket")}
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-8 gap-1 text-primary hover:text-primary/80 hover:bg-primary/10"
+        >
+          <span className="text-sm font-medium text-primary-foreground">
+            {t("tickets.actions.edit")}
+          </span>
+          <PencilLineIcon size={12} />
         </Button>
       </DialogTrigger>
 
       <DialogContent className="w-full max-w-md bg-background border border-border rounded-2xl p-6 shadow-lg max-h-[90vh] flex flex-col">
         <DialogHeader className="space-y-1 flex-shrink-0">
-          <DialogTitle className="text-lg font-semibold text-primary-foreground">
-            {t("tickets.dialog.new.title")}
+          <DialogTitle className="text-lg font-semibold text-primary">
+            {t("tickets.dialog.edit.title")}
           </DialogTitle>
           <DialogDescription className="text-sm text-muted-foreground leading-relaxed">
-            {t("tickets.dialog.new.description")}
+            {t("tickets.dialog.edit.description")} {ticket.ticketId}.
           </DialogDescription>
         </DialogHeader>
 
         <div className="overflow-y-auto flex-1 pr-2 -mr-2">
-          <CreateTicketForm onSuccess={() => setIsOpen(false)} />
+          <CreateTicketForm
+            onSuccess={() => setIsOpen(false)}
+            ticketToEdit={{
+              id: ticket.id,
+              client: ticket.client,
+              email: ticket.email,
+              priority: ticket.priority,
+              responsible: ticket.responsible,
+              subject: ticket.subject,
+            }}
+          />
         </div>
 
         <DialogFooter className="flex-shrink-0 mt-4">
@@ -59,7 +80,7 @@ export function TicketsActionButton() {
             type="submit"
             className="rounded-full px-6 bg-accent text-white shadow-(--shadow-accent) hover:bg-accent/80 transition-all"
           >
-            {t("tickets.dialog.buttons.save")}
+            {t("tickets.dialog.buttons.update")}
           </Button>
         </DialogFooter>
       </DialogContent>

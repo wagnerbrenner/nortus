@@ -1,6 +1,6 @@
-export type TicketStatus = "Aberto" | "Em Progresso" | "Pendente" | "Resolvido" | "Fechado";
+export type TicketStatus = "Aberto" | "Em andamento" | "Pendente" | "Resolvido" | "Fechado";
 
-export type TicketPriority = "Baixa" | "Média" | "Alta" | "Urgente";
+export type TicketPriority = "Baixa" | "Média" | "Urgente";
 
 export interface Ticket {
   id: string;

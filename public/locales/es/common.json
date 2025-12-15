@@ -93,6 +93,89 @@
   },
   "tickets": {
     "title": "Gestión de Tickets",
-    "newTicket": "Nuevo Ticket"
+    "newTicket": "Nuevo Ticket",
+    "stats": {
+      "open": "Tickets Abiertos",
+      "inProgress": "En Progreso",
+      "resolved": "Resueltos Hoy",
+      "avgTime": "Tiempo Promedio"
+    },
+    "table": {
+      "title": "Lista de Tickets",
+      "id": "ID",
+      "priority": "Prioridad",
+      "client": "Cliente",
+      "subject": "Asunto",
+      "status": "Estado",
+      "createdAt": "Creado el",
+      "responsible": "Responsable",
+      "actions": "Acciones"
+    },
+    "filters": {
+      "search": "Buscar por ID, cliente o asunto...",
+      "allStatuses": "Todos los estados",
+      "allPriorities": "Todas las prioridades",
+      "allResponsible": "Todos los responsables"
+    },
+    "pagination": {
+      "page": "Página",
+      "of": "de"
+    },
+    "statuses": {
+      "open": "Abierto",
+      "inProgress": "En Progreso",
+      "pending": "Pendiente",
+      "resolved": "Resuelto",
+      "closed": "Cerrado"
+    },
+    "priorities": {
+      "urgent": "Urgente",
+      "medium": "Media",
+      "low": "Baja"
+    },
+    "dialog": {
+      "new": {
+        "title": "Nuevo Ticket",
+        "description": "Complete los detalles a continuación para registrar un nuevo ticket en la plataforma."
+      },
+      "edit": {
+        "title": "Editar Ticket",
+        "description": "Actualice la información del ticket"
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "save": "Guardar",
+        "update": "Actualizar"
+      }
+    },
+    "form": {
+      "clientName": "Nombre del Cliente",
+      "clientNamePlaceholder": "Nombre de la persona o empresa que solicita soporte",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "Correo de contacto para actualizaciones y respuestas",
+      "priority": "Prioridad",
+      "priorityPlaceholder": "Seleccione el nivel de urgencia del servicio",
+      "responsible": "Responsable",
+      "responsiblePlaceholder": "Quién será responsable de este ticket",
+      "subject": "Asunto",
+      "subjectPlaceholder": "Breve resumen del problema o solicitud",
+      "validation": {
+        "clientNameMin": "El nombre del cliente debe tener al menos 3 caracteres",
+        "emailInvalid": "Correo electrónico inválido",
+        "priorityRequired": "Seleccione una prioridad",
+        "responsibleMin": "El responsable debe tener al menos 3 caracteres",
+        "subjectMin": "El asunto debe tener al menos 10 caracteres"
+      }
+    },
+    "actions": {
+      "edit": "Editar",
+      "view": "Ver"
+    },
+    "errors": {
+      "loadError": "Error al cargar tickets",
+      "loadErrorMessage": "No se pudieron cargar los datos de tickets. Inténtelo de nuevo más tarde.",
+      "noTickets": "No se encontraron tickets."
+    },
+    "loading": "Cargando tickets..."
   }
 }
