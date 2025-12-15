@@ -50,6 +50,30 @@
     "conversion": {
       "title": "Taxa de conversão",
       "label": "Conversão"
+    },
+    "map": {
+      "title": "Mapa de clientes por região",
+      "error": "Erro ao carregar mapa",
+      "errorMessage": "Não foi possível carregar os dados do mapa. Tente novamente mais tarde.",
+      "filters": {
+        "allLocations": "Todos os locais",
+        "allCategories": "Todas categorias",
+        "clearFilters": "Limpar filtros",
+        "selectLocation": "Selecione um local"
+      },
+      "noLocations": "Nenhuma localização encontrada",
+      "categories": {
+        "tourism": "Turismo",
+        "health": "Saúde",
+        "transport": "Transporte",
+        "education": "Educação",
+        "heritage": "Patrimônio",
+        "sports": "Esportes",
+        "food": "Alimentação",
+        "commerce": "Comércio",
+        "entertainment": "Entretenimento",
+        "park": "Parques"
+      }
     }
   },
   "tickets": {

@@ -17,7 +17,6 @@ export default function DashboardPage() {
   );
 }
 
-// Definir título da página para o Navbar
 DashboardPage.pageTitleKey = "dashboard.title";
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {

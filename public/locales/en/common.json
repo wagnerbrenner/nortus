@@ -50,6 +50,30 @@
     "conversion": {
       "title": "Conversion Rate",
       "label": "Conversion"
+    },
+    "map": {
+      "title": "Customer map by region",
+      "error": "Error loading map",
+      "errorMessage": "Could not load map data. Please try again later.",
+      "filters": {
+        "allLocations": "All locations",
+        "allCategories": "All categories",
+        "clearFilters": "Clear filters",
+        "selectLocation": "Select a location"
+      },
+      "noLocations": "No locations found",
+      "categories": {
+        "tourism": "Tourism",
+        "health": "Health",
+        "transport": "Transport",
+        "education": "Education",
+        "heritage": "Heritage",
+        "sports": "Sports",
+        "food": "Food",
+        "commerce": "Commerce",
+        "entertainment": "Entertainment",
+        "park": "Parks"
+      }
     }
   },
   "tickets": {
