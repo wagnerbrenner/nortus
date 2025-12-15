@@ -31,7 +31,26 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "welcome": "Welcome to Dashboard"
+    "welcome": "Welcome to Dashboard",
+    "kpis": {
+      "arpu": "ARPU",
+      "retention": "Retention",
+      "churn": "Churn",
+      "conversion": "Conversion",
+      "evolution": "KPI Evolution",
+      "buttons": {
+        "arpu": "ARPU",
+        "retention": "Retention",
+        "churn": "Churn",
+        "conversion": "Conversion"
+      },
+      "errorTitle": "Error loading data",
+      "errorMessage": "Could not load dashboard data. Please try again later."
+    },
+    "conversion": {
+      "title": "Conversion Rate",
+      "label": "Conversion"
+    }
   },
   "tickets": {
     "title": "Ticket Management",

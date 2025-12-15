@@ -28,6 +28,7 @@
   --chart-3: #1fbba7;
   --chart-4: #7acb58;
   --chart-5: #ffb74d;
+  --chart-active: #2db3c8;
   --sidebar: #0f172a;
   --sidebar-foreground: #e9edf5;
   --sidebar-primary: #2d8cff;
@@ -56,6 +57,7 @@
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
+  --color-chart-active: var(--chart-active);
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
@@ -139,6 +141,7 @@ body {
   --chart-3: #1fbba7;
   --chart-4: #7acb58;
   --chart-5: #ffb74d;
+  --chart-active: #2db3c8;
   --sidebar: #20273e;
   --sidebar-foreground: #e9edf5;
   --sidebar-primary: #3b82f6;

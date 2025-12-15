@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import type { GetStaticProps } from "next";
+import { DashboardContent } from "@/components/dashboard/dashboard-content";
 
 export default function DashboardPage() {
   const { t } = useTranslation("common");
@@ -11,9 +12,7 @@ export default function DashboardPage() {
       <Head>
         <title>{t("dashboard.title")} | Nortus</title>
       </Head>
-      <div className="space-y-6">
-        <p className="text-white text-lg">{t("dashboard.welcome")}</p>
-      </div>
+      <DashboardContent />
     </>
   );
 }

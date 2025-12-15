@@ -31,7 +31,26 @@
   },
   "dashboard": {
     "title": "Panel",
-    "welcome": "Bienvenido al Panel"
+    "welcome": "Bienvenido al Panel",
+    "kpis": {
+      "arpu": "ARPU",
+      "retention": "Retención",
+      "churn": "Churn",
+      "conversion": "Conversión",
+      "evolution": "Evolución de KPI's",
+      "buttons": {
+        "arpu": "ARPU",
+        "retention": "Retención",
+        "churn": "Churn",
+        "conversion": "Conversión"
+      },
+      "errorTitle": "Error al cargar datos",
+      "errorMessage": "No se pudieron cargar los datos del dashboard. Inténtelo más tarde."
+    },
+    "conversion": {
+      "title": "Tasa de conversión",
+      "label": "Conversión"
+    }
   },
   "tickets": {
     "title": "Gestión de Tickets",

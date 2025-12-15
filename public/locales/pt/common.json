@@ -31,7 +31,26 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "welcome": "Bem-vindo ao Dashboard"
+    "welcome": "Bem-vindo ao Dashboard",
+    "kpis": {
+      "arpu": "ARPU",
+      "retention": "Retenção",
+      "churn": "Churn",
+      "conversion": "Conversão",
+      "evolution": "Evolução dos KPI's",
+      "buttons": {
+        "arpu": "ARPU",
+        "retention": "Retenção",
+        "churn": "Churn",
+        "conversion": "Conversão"
+      },
+      "errorTitle": "Erro ao carregar dados",
+      "errorMessage": "Não foi possível carregar os dados do dashboard. Tente novamente mais tarde."
+    },
+    "conversion": {
+      "title": "Taxa de conversão",
+      "label": "Conversão"
+    }
   },
   "tickets": {
     "title": "Gestão de Tickets",
