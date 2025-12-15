@@ -187,6 +187,16 @@
     },
     "suggestion": {
       "title": "AI Suggestion"
+    "loading": "Loading tickets...",
+    "notifications": {
+      "createSuccess": "Ticket created successfully!",
+      "createSuccessDescription": "The ticket has been created and is now in your list.",
+      "updateSuccess": "Ticket updated successfully!",
+      "updateSuccessDescription": "Ticket information has been updated.",
+      "createError": "Error creating ticket",
+      "createErrorDescription": "Could not create the ticket. Please try again.",
+      "updateError": "Error updating ticket",
+      "updateErrorDescription": "Could not update the ticket. Please try again."
     }
   }
 }

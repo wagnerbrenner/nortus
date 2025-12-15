@@ -14,18 +14,26 @@ export function useLogin() {
     onSuccess: async (data) => {
       setAuth(data.token, data.username);
 
-      toast.success("Login realizado com sucesso!");
+      toast.success("Login realizado com sucesso!", {
+        position: "bottom-center",
+      });
       router.push("/dashboard");
     },
     onError: (error: { response?: { status?: number } }) => {
       const status = error.response?.status;
 
       if (status === 400) {
-        toast.error("Dados inválidos. Verifique os campos e tente novamente.");
+        toast.error("Dados inválidos. Verifique os campos e tente novamente.", {
+          position: "bottom-center",
+        });
       } else if (status === 401) {
-        toast.error("E-mail ou senha incorretos.");
+        toast.error("E-mail ou senha incorretos.", {
+          position: "bottom-center",
+        });
       } else {
-        toast.error("Falha ao autenticar. Tente novamente mais tarde.");
+        toast.error("Falha ao autenticar. Tente novamente mais tarde.", {
+          position: "bottom-center",
+        });
       }
     },
   });
