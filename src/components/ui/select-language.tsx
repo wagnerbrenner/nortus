@@ -3,6 +3,8 @@
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./select";
 import { BR, ES, US } from "country-flag-icons/react/3x2";
 import * as React from "react";
+import { useRouter } from "next/router";
+import { useLanguageStore } from "@/store/language.store";
 
 const languages = [
   { value: "pt", label: "PT-BR", Flag: BR },
@@ -11,11 +13,20 @@ const languages = [
 ];
 
 export function SelectLanguage() {
-  const [selected, setSelected] = React.useState("pt");
+  const router = useRouter();
+  const { language, setLanguage } = useLanguageStore();
+  const [selected, setSelected] = React.useState(language);
   const current = languages.find((l) => l.value === selected)!;
 
+  const handleLanguageChange = (newLang: string) => {
+    const lang = newLang as "pt" | "en" | "es";
+    setSelected(lang);
+    setLanguage(lang);
+    router.push(router.pathname, router.asPath, { locale: newLang });
+  };
+
   return (
-    <Select value={selected} onValueChange={setSelected}>
+    <Select value={selected} onValueChange={handleLanguageChange}>
       <SelectTrigger
         className="cursor-pointer
           w-[130px] h-10 rounded-full bg-secondary/80 text-foreground 

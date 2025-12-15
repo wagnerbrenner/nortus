@@ -96,9 +96,16 @@ export function LoginForm() {
       <Button
         type="submit"
         disabled={login.isPending}
-        className=" cursor-pointer w-full h-12 mt-2 rounded-lg bg-[#1876D2] text-white font-medium hover:bg-accent/80 transition-all"
+        className="w-full h-12 mt-2 rounded-lg bg-[#1876D2] text-white font-medium hover:bg-[#1876D2]/90 disabled:opacity-50 transition-all"
       >
-        {login.isPending ? "Entrando..." : "Entrar"}
+        {login.isPending ? (
+          <div className="flex items-center gap-2">
+            <div className="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-white"></div>
+            <span>Entrando...</span>
+          </div>
+        ) : (
+          "Entrar"
+        )}
       </Button>
     </form>
   );

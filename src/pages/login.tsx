@@ -3,6 +3,8 @@ import { LoginForm } from "@/components/login/login-form";
 import { LoginHeader } from "@/components/login/login-header";
 import { LoginHero } from "@/components/login/login-hero";
 import { LoginActions } from "@/components/login/login-actions";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import type { GetStaticProps } from "next";
 
 export default function LoginPage() {
   return (
@@ -24,3 +26,11 @@ export default function LoginPage() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? "pt", ["common"])),
+    },
+  };
+};

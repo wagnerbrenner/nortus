@@ -17,7 +17,7 @@ export function useLogin() {
       toast.success("Login realizado com sucesso!");
       router.push("/dashboard");
     },
-    onError: (error: any) => {
+    onError: (error: { response?: { status?: number } }) => {
       const status = error.response?.status;
 
       if (status === 400) {

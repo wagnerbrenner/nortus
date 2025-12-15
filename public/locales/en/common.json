@@ -1,0 +1,40 @@
+{
+  "menu": {
+    "dashboard": "Dashboard",
+    "tickets": "Tickets",
+    "chat": "Chat",
+    "profile": "Profile",
+    "simulator": "Simulator"
+  },
+  "userMenu": {
+    "language": "Language",
+    "theme": "Theme",
+    "logout": "Logout"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Auto"
+  },
+  "login": {
+    "title": "Welcome back",
+    "subtitle": "Enter your credentials to access your account",
+    "email": "Email",
+    "password": "Password",
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "loginButton": "Sign in",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "emailPlaceholder": "your@email.com",
+    "passwordPlaceholder": "Enter your password"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to Dashboard"
+  },
+  "tickets": {
+    "title": "Ticket Management",
+    "newTicket": "New Ticket"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "menu": {
+    "dashboard": "Dashboard",
+    "tickets": "Tickets",
+    "chat": "Chat",
+    "profile": "Perfil",
+    "simulator": "Simulador"
+  },
+  "userMenu": {
+    "language": "Idioma",
+    "theme": "Tema",
+    "logout": "Sair"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Auto"
+  },
+  "login": {
+    "title": "Bem-vindo de volta",
+    "subtitle": "Entre com suas credenciais para acessar sua conta",
+    "email": "E-mail",
+    "password": "Senha",
+    "rememberMe": "Lembrar-me",
+    "forgotPassword": "Esqueceu a senha?",
+    "loginButton": "Entrar",
+    "noAccount": "Não tem uma conta?",
+    "signUp": "Cadastre-se",
+    "emailPlaceholder": "seu@email.com",
+    "passwordPlaceholder": "Digite sua senha"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Bem-vindo ao Dashboard"
+  },
+  "tickets": {
+    "title": "Gestão de Tickets",
+    "newTicket": "Novo Ticket"
+  }
+}

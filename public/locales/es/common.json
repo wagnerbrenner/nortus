@@ -1,0 +1,40 @@
+{
+  "menu": {
+    "dashboard": "Panel",
+    "tickets": "Tickets",
+    "chat": "Chat",
+    "profile": "Perfil",
+    "simulator": "Simulador"
+  },
+  "userMenu": {
+    "language": "Idioma",
+    "theme": "Tema",
+    "logout": "Salir"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "auto": "Auto"
+  },
+  "login": {
+    "title": "Bienvenido de nuevo",
+    "subtitle": "Ingrese sus credenciales para acceder a su cuenta",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "rememberMe": "Recuérdame",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "loginButton": "Iniciar sesión",
+    "noAccount": "¿No tienes una cuenta?",
+    "signUp": "Regístrate",
+    "emailPlaceholder": "tu@correo.com",
+    "passwordPlaceholder": "Ingresa tu contraseña"
+  },
+  "dashboard": {
+    "title": "Panel",
+    "welcome": "Bienvenido al Panel"
+  },
+  "tickets": {
+    "title": "Gestión de Tickets",
+    "newTicket": "Nuevo Ticket"
+  }
+}
