@@ -74,6 +74,21 @@
         "entertainment": "Entertainment",
         "park": "Parks"
       }
+    },
+    "clients": {
+      "title": "Active Clients",
+      "name": "Name",
+      "region": "Region",
+      "status": "Status",
+      "secureType": "Insurance Type",
+      "monthValue": "Monthly Value",
+      "renewalDate": "Renewal",
+      "searchPlaceholder": "Search by name or email...",
+      "allStatuses": "All statuses",
+      "allTypes": "All types",
+      "allRegions": "All regions",
+      "clearFilters": "Clear filters",
+      "noClients": "No clients found"
     }
   },
   "tickets": {

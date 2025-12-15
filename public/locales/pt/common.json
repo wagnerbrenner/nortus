@@ -74,6 +74,21 @@
         "entertainment": "Entretenimento",
         "park": "Parques"
       }
+    },
+    "clients": {
+      "title": "Clientes Ativos",
+      "name": "Nome",
+      "region": "Região",
+      "status": "Status",
+      "secureType": "Tipo de Seguro",
+      "monthValue": "Valor Mensal",
+      "renewalDate": "Renovação",
+      "searchPlaceholder": "Buscar por nome ou e-mail...",
+      "allStatuses": "Todos os status",
+      "allTypes": "Todos os tipos",
+      "allRegions": "Todas as regiões",
+      "clearFilters": "Limpar filtros",
+      "noClients": "Nenhum cliente encontrado"
     }
   },
   "tickets": {

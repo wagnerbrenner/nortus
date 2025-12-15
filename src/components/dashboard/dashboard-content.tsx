@@ -5,6 +5,7 @@ import { dashboardService } from "@/services/dashboard.service";
 import { KPIChart } from "./kpi-chart";
 import { ConversionChart } from "./conversion-chart";
 import { ClientMap } from "./client-map";
+import { ClientsTable } from "./clients-table";
 import { AlertCircle } from "lucide-react";
 
 export function DashboardContent() {
@@ -55,6 +56,8 @@ export function DashboardContent() {
       </div>
 
       <ClientMap />
+
+      <ClientsTable />
     </div>
   );
 }

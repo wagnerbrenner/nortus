@@ -160,4 +160,29 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(31, 42, 61, 0.3);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(159, 176, 211, 0.3);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(159, 176, 211, 0.5);
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(159, 176, 211, 0.3) rgba(31, 42, 61, 0.3);
+  }
 }
