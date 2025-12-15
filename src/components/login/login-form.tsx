@@ -19,7 +19,6 @@ export function LoginForm() {
     register,
     handleSubmit,
     setValue,
-    watch,
     formState: { errors },
   } = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
@@ -31,8 +30,6 @@ export function LoginForm() {
   });
 
   const login = useLogin();
-  const remember = watch("remember");
-  const email = watch("email");
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -43,16 +40,6 @@ export function LoginForm() {
       }
     }
   }, [setValue]);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      if (remember && email) {
-        localStorage.setItem("remembered_email", email);
-      } else if (!remember) {
-        localStorage.removeItem("remembered_email");
-      }
-    }
-  }, [remember, email]);
 
   const onSubmit = (data: LoginSchema) => {
     login.mutate(data);

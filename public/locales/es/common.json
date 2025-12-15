@@ -12,9 +12,9 @@
     "logout": "Salir"
   },
   "theme": {
-    "light": "Light",
-    "dark": "Dark",
-    "auto": "Auto"
+    "light": "Claro",
+    "dark": "Oscuro",
+    "auto": "Automático"
   },
   "login": {
     "title": "Bienvenido de nuevo",
@@ -177,5 +177,16 @@
       "noTickets": "No se encontraron tickets."
     },
     "loading": "Cargando tickets..."
+  },
+  "chat": {
+    "title": "Chat y Asistente Virtual",
+    "loading": "Cargando conversación...",
+    "empty": "¡Aún no hay mensajes. Comienza la conversación!",
+    "input": {
+      "placeholder": "Escribe aquí..."
+    },
+    "suggestion": {
+      "title": "Sugerencia de IA"
+    }
   }
 }

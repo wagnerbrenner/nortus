@@ -12,9 +12,9 @@
     "logout": "Sair"
   },
   "theme": {
-    "light": "Light",
-    "dark": "Dark",
-    "auto": "Auto"
+    "light": "Claro",
+    "dark": "Escuro",
+    "auto": "Automático"
   },
   "login": {
     "title": "Bem-vindo de volta",
@@ -177,5 +177,16 @@
       "noTickets": "Nenhum ticket encontrado."
     },
     "loading": "Carregando tickets..."
+  },
+  "chat": {
+    "title": "Chat & Assistente Virtual",
+    "loading": "Carregando conversa...",
+    "empty": "Nenhuma mensagem ainda. Comece a conversa!",
+    "input": {
+      "placeholder": "Escreva aqui..."
+    },
+    "suggestion": {
+      "title": "Sugestão da IA"
+    }
   }
 }

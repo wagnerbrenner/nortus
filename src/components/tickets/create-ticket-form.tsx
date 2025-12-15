@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/select";
 import { cn } from "@/components/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import { CreateTicketInput, createTicketSchema } from "@/schema/create-ticket.schema";
 import { useTicketsStore } from "@/store/tickets.store";
 
@@ -37,9 +37,8 @@ export function CreateTicketForm({ onSuccess, ticketToEdit }: Props) {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
-    watch,
     reset,
+    control,
   } = useForm<CreateTicketInput>({
     resolver: zodResolver(createTicketSchema),
     defaultValues: ticketToEdit
@@ -74,8 +73,6 @@ export function CreateTicketForm({ onSuccess, ticketToEdit }: Props) {
     reset();
     onSuccess?.();
   });
-
-  const selectedPriority = watch("priority");
 
   const fieldBase =
     "bg-secondary text-foreground placeholder:text-muted-foreground/70 border border-border focus:ring-1 focus:ring-accent transition-all rounded-full";
@@ -114,23 +111,22 @@ export function CreateTicketForm({ onSuccess, ticketToEdit }: Props) {
         <Label htmlFor="priority" className="text-sm font-medium text-primary-foreground mb-1">
           {t("tickets.form.priority")}
         </Label>
-        <Select
-          value={selectedPriority}
-          onValueChange={(value) =>
-            setValue("priority", value as CreateTicketInput["priority"], {
-              shouldValidate: true,
-            })
-          }
-        >
-          <SelectTrigger className={cn(fieldBase, "rounded-full")}>
-            <SelectValue placeholder={t("tickets.form.priorityPlaceholder")} />
-          </SelectTrigger>
-          <SelectContent className="bg-secondary text-foreground rounded-lg border border-border shadow-md">
-            <SelectItem value="Urgente">{t("tickets.priorities.urgent")}</SelectItem>
-            <SelectItem value="Média">{t("tickets.priorities.medium")}</SelectItem>
-            <SelectItem value="Baixa">{t("tickets.priorities.low")}</SelectItem>
-          </SelectContent>
-        </Select>
+        <Controller
+          name="priority"
+          control={control}
+          render={({ field }) => (
+            <Select value={field.value} onValueChange={field.onChange}>
+              <SelectTrigger className={cn(fieldBase, "rounded-full")}>
+                <SelectValue placeholder={t("tickets.form.priorityPlaceholder")} />
+              </SelectTrigger>
+              <SelectContent className="bg-secondary text-foreground rounded-lg border border-border shadow-md">
+                <SelectItem value="Urgente">{t("tickets.priorities.urgent")}</SelectItem>
+                <SelectItem value="Média">{t("tickets.priorities.medium")}</SelectItem>
+                <SelectItem value="Baixa">{t("tickets.priorities.low")}</SelectItem>
+              </SelectContent>
+            </Select>
+          )}
+        />
         <span className={errorText}>{errors.priority?.message || ""}</span>
       </div>
 
