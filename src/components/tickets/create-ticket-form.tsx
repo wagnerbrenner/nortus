@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslation } from "next-i18next";
+import { toast } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
@@ -54,25 +55,67 @@ export function CreateTicketForm({ onSuccess, ticketToEdit }: Props) {
   });
 
   const onSubmit = handleSubmit((values) => {
-    if (ticketToEdit) {
-      updateTicket(ticketToEdit.id, {
-        client: values.clientName,
-        email: values.email,
-        priority: values.priority,
-        responsible: values.responsible,
-        subject: values.subject,
-      });
-    } else {
-      addTicket({
-        client: values.clientName,
-        email: values.email,
-        priority: values.priority,
-        responsible: values.responsible,
-        subject: values.subject,
-      });
+    try {
+      if (ticketToEdit) {
+        updateTicket(ticketToEdit.id, {
+          client: values.clientName,
+          email: values.email,
+          priority: values.priority,
+          responsible: values.responsible,
+          subject: values.subject,
+        });
+        toast.info(t("tickets.notifications.updateSuccess"), {
+          description: t("tickets.notifications.updateSuccessDescription"),
+          position: "bottom-center",
+          style: {
+            background: "#1876D2",
+            color: "white",
+            borderRadius: "10px",
+            border: "none",
+            padding: "16px",
+            minWidth: "450px",
+            minHeight: "88px",
+            gap: "16px",
+          },
+        });
+      } else {
+        addTicket({
+          client: values.clientName,
+          email: values.email,
+          priority: values.priority,
+          responsible: values.responsible,
+          subject: values.subject,
+        });
+        toast.info(t("tickets.notifications.createSuccess"), {
+          description: t("tickets.notifications.createSuccessDescription"),
+          position: "bottom-center",
+          style: {
+            background: "#1876D2",
+            color: "white",
+            border: "none",
+            borderRadius: "10px",
+            padding: "16px",
+            minWidth: "450px",
+            minHeight: "88px",
+            gap: "16px",
+          },
+        });
+      }
+      reset();
+      onSuccess?.();
+    } catch (error) {
+      if (ticketToEdit) {
+        toast.error(t("tickets.notifications.updateError"), {
+          description: t("tickets.notifications.updateErrorDescription"),
+          position: "bottom-center",
+        });
+      } else {
+        toast.error(t("tickets.notifications.createError"), {
+          description: t("tickets.notifications.createErrorDescription"),
+          position: "bottom-center",
+        });
+      }
     }
-    reset();
-    onSuccess?.();
   });
 
   const selectedPriority = watch("priority");

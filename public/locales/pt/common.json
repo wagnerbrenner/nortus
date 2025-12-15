@@ -176,6 +176,16 @@
       "loadErrorMessage": "Não foi possível carregar os dados de tickets. Tente novamente mais tarde.",
       "noTickets": "Nenhum ticket encontrado."
     },
-    "loading": "Carregando tickets..."
+    "loading": "Carregando tickets...",
+    "notifications": {
+      "createSuccess": "Ticket criado com sucesso!",
+      "createSuccessDescription": "O ticket foi criado e já está na sua lista.",
+      "updateSuccess": "Ticket atualizado com sucesso!",
+      "updateSuccessDescription": "As informações do ticket foram atualizadas.",
+      "createError": "Erro ao criar ticket",
+      "createErrorDescription": "Não foi possível criar o ticket. Tente novamente.",
+      "updateError": "Erro ao atualizar ticket",
+      "updateErrorDescription": "Não foi possível atualizar o ticket. Tente novamente."
+    }
   }
 }
