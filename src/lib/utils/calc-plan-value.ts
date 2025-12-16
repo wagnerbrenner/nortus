@@ -1,10 +1,4 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
 import { Coverages } from "@/types/simulator";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
 
 export function calcPlanValue(baseValue: number, coverages: Coverages): number {
   let total = baseValue;

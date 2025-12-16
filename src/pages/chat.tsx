@@ -11,6 +11,7 @@ import { AssistantMessage } from "@/components/chat/assistant-message";
 import { IASuggestion } from "@/components/chat/ia-suggestion";
 import { ChatInput } from "@/components/chat/chat-input";
 import { MessageCircle } from "lucide-react";
+import { ChatSkeleton } from "@/components/chat/chat-skeleton";
 
 export default function ChatPage() {
   const { t } = useTranslation("common");
@@ -23,8 +24,10 @@ export default function ChatPage() {
   };
 
   useEffect(() => {
-    scrollToBottom();
-  }, [data.messages]);
+    if (data && data.messages) {
+      scrollToBottom();
+    }
+  }, [data?.messages]);
 
   useEffect(() => {
     const updateDateTime = () => {
@@ -48,12 +51,7 @@ export default function ChatPage() {
         <Head>
           <title>{t("chat.title")} | Nortus</title>
         </Head>
-        <div className="flex items-center justify-center min-h-[60vh]">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#1876D2] mx-auto mb-4"></div>
-            <p className="text-muted-foreground">{t("chat.loading")}</p>
-          </div>
-        </div>
+        <ChatSkeleton />
       </>
     );
   }
@@ -64,7 +62,7 @@ export default function ChatPage() {
         <title>{t("chat.title")} | Nortus</title>
       </Head>
 
-      <div className="w-full h-[calc(100vh-10rem)] flex flex-col items-center">
+      <div className="w-full h-[calc(100vh-10rem)] flex flex-col items-center overflow-hidden">
         <div className="w-3/4 bg-secondary/40 dark:bg-secondary/30 border border-border rounded-2xl p-10 flex-1 flex flex-col shadow-xl overflow-hidden">
           <div className="flex items-center justify-center mb-6 pb-4 border-b border-border/40 dark:border-border/30">
             <p className="text-xs text-muted-foreground/80 uppercase tracking-wider font-medium">

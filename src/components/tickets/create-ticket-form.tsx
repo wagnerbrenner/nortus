@@ -102,7 +102,7 @@ export function CreateTicketForm({ onSuccess, ticketToEdit }: Props) {
       }
       reset();
       onSuccess?.();
-    } catch (error) {
+    } catch {
       if (ticketToEdit) {
         toast.error(t("tickets.notifications.updateError"), {
           description: t("tickets.notifications.updateErrorDescription"),

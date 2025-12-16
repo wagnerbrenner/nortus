@@ -176,17 +176,6 @@
       "loadErrorMessage": "Could not load ticket data. Please try again later.",
       "noTickets": "No tickets found."
     },
-    "loading": "Loading tickets..."
-  },
-  "chat": {
-    "title": "Chat & Virtual Assistant",
-    "loading": "Loading conversation...",
-    "empty": "No messages yet. Start the conversation!",
-    "input": {
-      "placeholder": "Write here..."
-    },
-    "suggestion": {
-      "title": "AI Suggestion"
     "loading": "Loading tickets...",
     "notifications": {
       "createSuccess": "Ticket created successfully!",
@@ -197,6 +186,56 @@
       "createErrorDescription": "Could not create the ticket. Please try again.",
       "updateError": "Error updating ticket",
       "updateErrorDescription": "Could not update the ticket. Please try again."
+    }
+  },
+  "chat": {
+    "title": "Chat & Virtual Assistant",
+    "loading": "Loading conversation...",
+    "empty": "No messages yet. Start the conversation!",
+    "input": {
+      "placeholder": "Write here..."
+    },
+    "suggestion": {
+      "title": "AI Suggestion"
+    }
+  },
+  "simulator": {
+    "title": "Simulator",
+    "plans": {
+      "title": "Custom Plans",
+      "recommended": "Recommended",
+      "perMonth": "Per month",
+      "básico": "Basic",
+      "intermediário": "Intermediate",
+      "premium": "Premium"
+    },
+    "coverages": {
+      "title": "Additional Coverages",
+      "theft": "Theft Coverage",
+      "collision": "Collision Damage",
+      "fire": "Fire Coverage",
+      "naturalPhenomena": "Natural Phenomena (hail, flood)"
+    },
+    "benefits": {
+      "title": "Included Benefits",
+      "Tudo do básico": "Everything from the basic plan",
+      "Carro reserva": "Replacement vehicle",
+      "Vidros": "Glass coverage"
+    },
+    "currency": "BRL",
+    "plansIndicators": {
+      "Básico": "Basic",
+      "Intermediário": "Intermediate",
+      "Premium": "Premium"
+    },
+    "indicators": {
+      "title": "Indicators",
+      "conversion": "Conversion",
+      "roi": "ROI"
+    },
+    "errors": {
+      "loadError": "Error loading simulator",
+      "loadErrorMessage": "Could not load simulator data. Please try again later."
     }
   }
 }

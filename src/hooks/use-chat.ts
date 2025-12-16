@@ -1,58 +1,17 @@
 "use client";
 
+import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
-
-export type MessageType = "user_message" | "assistant_message" | "ai_suggestion";
-
-export interface ChatMessage {
-  id: string;
-  type: MessageType;
-  author?: string;
-  content: string;
-  timestamp: string;
-  suggestions?: string[];
-}
-
-export interface ChatData {
-  messages: ChatMessage[];
-}
-
-const initialMessages: ChatMessage[] = [
-  {
-    id: "1",
-    type: "user_message",
-    author: "Ricardo Leite - Seguro Automóvel",
-    content: "Oi! Tudo certo? Gostaria de saber sobre o seguro automóvel",
-    timestamp: "14:23",
-  },
-  {
-    id: "2",
-    type: "assistant_message",
-    content:
-      "Olá, Ricardo! Tudo ótimo e com você? Claro que sim, posso te ajudar com o que precisar. Vá em frente e me conte mais sobre o que precisa :)",
-    timestamp: "14:23",
-  },
-  {
-    id: "3",
-    type: "user_message",
-    author: "Ricardo Leite - Seguro Automóvel",
-    content:
-      "Tipo! Meu sogro tá ficando pensando... tem alguma coisa além disso? Tipo, prós novos equipamentos?",
-    timestamp: "14:25",
-  },
-  {
-    id: "4",
-    type: "ai_suggestion",
-    content:
-      "Baseado no perfil do cliente, recomendo a oferta Premium com desconto de 15%. Cliente tem histórico positivo.",
-    timestamp: "14:24",
-    suggestions: ["Enviar proposta", "Fazer ligação", "Ver histórico"],
-  },
-];
+import { chatService } from "@/services/chat.service";
+import type { ChatMessage } from "@/types/chat";
 
 export function useChat() {
-  const [loading, setLoading] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>(initialMessages);
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["chat-data"],
+    queryFn: chatService.getChatData,
+  });
+
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
 
   const sendMessage = (content: string) => {
     const newMessage: ChatMessage = {
@@ -72,7 +31,8 @@ export function useChat() {
       const responseMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         type: "assistant_message",
-        content: "Entendi! Deixe-me verificar as melhores opções para você...",
+        content:
+          data?.iaSuggestion || "Entendi! Deixe-me verificar as melhores opções para você...",
         timestamp: new Date().toLocaleTimeString("pt-BR", {
           hour: "2-digit",
           minute: "2-digit",
@@ -83,8 +43,15 @@ export function useChat() {
   };
 
   return {
-    data: { messages },
-    loading,
+    data: data
+      ? {
+          messages: [...data.messages, ...messages],
+          iaSuggestion: data.iaSuggestion,
+          conversationAnalysis: data.conversationAnalysis,
+        }
+      : undefined,
+    loading: isLoading,
+    error,
     sendMessage,
   };
 }

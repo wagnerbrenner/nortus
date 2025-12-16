@@ -30,7 +30,7 @@ const menuItems = [
   },
   {
     nameKey: "menu.simulator",
-    href: "/simulador",
+    href: "/simulator",
     icon: CalendarDays,
   },
 ];

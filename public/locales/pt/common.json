@@ -176,17 +176,6 @@
       "loadErrorMessage": "Não foi possível carregar os dados de tickets. Tente novamente mais tarde.",
       "noTickets": "Nenhum ticket encontrado."
     },
-    "loading": "Carregando tickets..."
-  },
-  "chat": {
-    "title": "Chat & Assistente Virtual",
-    "loading": "Carregando conversa...",
-    "empty": "Nenhuma mensagem ainda. Comece a conversa!",
-    "input": {
-      "placeholder": "Escreva aqui..."
-    },
-    "suggestion": {
-      "title": "Sugestão da IA"
     "loading": "Carregando tickets...",
     "notifications": {
       "createSuccess": "Ticket criado com sucesso!",
@@ -197,6 +186,57 @@
       "createErrorDescription": "Não foi possível criar o ticket. Tente novamente.",
       "updateError": "Erro ao atualizar ticket",
       "updateErrorDescription": "Não foi possível atualizar o ticket. Tente novamente."
+    }
+  },
+  "chat": {
+    "title": "Chat & Assistente Virtual",
+    "loading": "Carregando conversa...",
+    "empty": "Nenhuma mensagem ainda. Comece a conversa!",
+    "input": {
+      "placeholder": "Escreva aqui..."
+    },
+    "suggestion": {
+      "title": "Sugestão da IA"
+    }
+  },
+  "simulator": {
+    "title": "Simulador",
+    "plans": {
+      "title": "Planos personalizados",
+      "recommended": "Recomendado",
+      "perMonth": "Por mês",
+      "básico": "Básico",
+      "intermediário": "Padrão",
+      "premium": "Premium"
+    },
+    "coverages": {
+      "title": "Coberturas adicionais",
+      "theft": "Cobertura contra roubo e furto",
+      "collision": "Danos por colisão",
+      "fire": "Cobertura contra incêndio",
+      "natural": "Fenômenos naturais (granizo, enchente)"
+    },
+    "benefits": {
+      "title": "Benefícios Inclusos",
+      "Assistência 24h": "Assistência 24h",
+      "Carro reserva": "Carro Reserva",
+      "Tudo do básico": "Tudo do básico",
+      "Vidros": "Vidros "
+    },
+    "currency": "R$",
+    "plansIndicators": {
+      "Básico": "Básico",
+      "Intermediário": "Intermediário",
+      "Premium": "Premium"
+    },
+    "indicators": {
+      "title": "Indicadores",
+      "conversion": "Conversão",
+      "roi": "ROI"
+    },
+    "errors": {
+      "loadError": "Erro ao carregar simulador",
+      "loadErrorMessage": "Não foi possível carregar os dados do simulador. Tente novamente mais tarde."
     }
   }
 }

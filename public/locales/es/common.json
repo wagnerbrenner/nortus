@@ -176,17 +176,6 @@
       "loadErrorMessage": "No se pudieron cargar los datos de tickets. Inténtelo de nuevo más tarde.",
       "noTickets": "No se encontraron tickets."
     },
-    "loading": "Cargando tickets..."
-  },
-  "chat": {
-    "title": "Chat y Asistente Virtual",
-    "loading": "Cargando conversación...",
-    "empty": "¡Aún no hay mensajes. Comienza la conversación!",
-    "input": {
-      "placeholder": "Escribe aquí..."
-    },
-    "suggestion": {
-      "title": "Sugerencia de IA"
     "loading": "Cargando tickets...",
     "notifications": {
       "createSuccess": "¡Ticket creado con éxito!",
@@ -197,6 +186,57 @@
       "createErrorDescription": "No se pudo crear el ticket. Inténtelo de nuevo.",
       "updateError": "Error al actualizar ticket",
       "updateErrorDescription": "No se pudo actualizar el ticket. Inténtelo de nuevo."
+    }
+  },
+  "chat": {
+    "title": "Chat y Asistente Virtual",
+    "loading": "Cargando conversación...",
+    "empty": "¡Aún no hay mensajes. Comienza la conversación!",
+    "input": {
+      "placeholder": "Escribe aquí..."
+    },
+    "suggestion": {
+      "title": "Sugerencia de IA"
+    }
+  },
+  "simulator": {
+    "title": "Simulador",
+    "plans": {
+      "title": "Planes personalizados",
+      "recommended": "Recomendado",
+      "perMonth": "Por mes",
+      "básico": "Básico",
+      "premium": "Premium",
+      "intermediário": "intermediario"
+    },
+    "coverages": {
+      "title": "Coberturas Adicionais",
+      "theft": "Cobertura contra robo y hurto",
+      "collision": "Daños por colisión",
+      "fire": "Cobertura contra incendio",
+      "naturalPhenomena": "Fenómenos naturales (granizo, inundación)"
+    },
+    "benefits": {
+      "title": "Beneficios Incluidos",
+      "Tudo do básico": "Todo lo del plan básico",
+      "Carro reserva": "Vehículo de reemplazo",
+      "Assistência 24h": "Asistencia 24h",
+      "Vidros": "Cristales"
+    },
+    "currency": "BRL",
+    "plansIndicators": {
+      "Básico": "Básico",
+      "Intermediário": "Intermedio",
+      "Premium": "Premium"
+    },
+    "indicators": {
+      "title": "Indicadores",
+      "conversion": "Conversión",
+      "roi": "ROI"
+    },
+    "errors": {
+      "loadError": "Error al cargar simulador",
+      "loadErrorMessage": "No se pudieron cargar los datos del simulador. Inténtelo más tarde."
     }
   }
 }

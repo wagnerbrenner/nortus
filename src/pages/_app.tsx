@@ -48,11 +48,11 @@ function App({ Component, pageProps }: AppPropsWithLayout) {
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
-        <div className="min-h-screen bg-background">
+        <div className="h-screen bg-background overflow-hidden flex flex-col">
           <Sidebar />
           <DynamicNavbar titleKey={Component.pageTitleKey} actionButton={Component.actionButton} />
 
-          <main className="ml-20 mt-20 min-h-[calc(100vh-5rem)] p-8">
+          <main className="ml-20 mt-20 h-[calc(100vh-5rem)] p-8 overflow-y-auto">
             <Component {...pageProps} />
           </main>
         </div>

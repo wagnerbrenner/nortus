@@ -10,6 +10,7 @@ import { TicketsTable } from "@/components/tickets/tickets-table";
 import { useTickets } from "@/hooks/use-tickets";
 import { AlertCircle } from "lucide-react";
 import { useMemo } from "react";
+import { TicketsSkeleton } from "@/components/tickets/tickets-skeleton";
 
 export default function TicketsPage() {
   const { t } = useTranslation("common");
@@ -58,9 +59,7 @@ export default function TicketsPage() {
         <Head>
           <title>{t("tickets.title")} | Nortus</title>
         </Head>
-        <main className="flex items-center justify-center min-h-[60vh]">
-          <div className="text-muted-foreground">{t("tickets.loading")}</div>
-        </main>
+        <TicketsSkeleton />
       </>
     );
   }
